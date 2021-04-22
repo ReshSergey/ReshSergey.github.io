@@ -1,0 +1,25 @@
+//base
+@import "base/variables";
+// @import "base/mixins";
+@import "base/fonts";
+@import "base/container";
+
+//blocks
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/advantages";
+@import "blocks/title";
+@import "blocks/consultation";
+@import "blocks/forms";
+@import "blocks/carousel";
+@import "blocks/catalog";
+@import "blocks/reviews";
+@import "blocks/footer";
+@import "blocks/modal";
+
+// media queries
+@import "media/1200";
+@import "media/991";
+@import "media/767";
+@import "media/575";

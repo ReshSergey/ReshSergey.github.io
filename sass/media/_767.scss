@@ -1,0 +1,58 @@
+@media (max-width: 767px) {
+    .header {
+        justify-content: space-around;
+    }
+    .promo{
+        padding: 0;
+        text-align: center;
+        &__header {
+            font-size: 35px;
+        }
+        &__icons {
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &__icon {
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            margin-top: 60px;
+            align-items: center;
+            padding-bottom: 15px;
+            margin-top: 50px;
+            margin-right: 0;
+        }
+    }
+    .button_main {
+        margin-top: 40px;
+        width: 280px;
+        
+    }
+    .advantages {
+        padding: 50px 0 45px 0;
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        &__item {
+            margin-bottom: 25px;
+        }
+    }
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+        }
+        &__tab {
+            width: 270px;
+            margin-bottom: 15px;
+        }
+
+    }
+    .footer {
+        &__info {
+            width: 100vw;
+        }
+    }
+}

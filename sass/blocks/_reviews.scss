@@ -1,0 +1,38 @@
+.reviews {
+    min-height: 942px;
+    margin-bottom: 26px;
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    &__img {
+        width: 169px;
+        height: 169px;
+        border-radius: 50%;
+        margin-right: 60px;
+        img {
+            width: 100%;
+        }
+    }
+    &__user-name {
+        font-weight: bold;
+        font-size: 18px;
+        color: #0D0D0D;
+    }
+    &__distance {
+        font-weight: 500;
+        font-size: 14px;
+        color: #646464;
+    }
+    &__descr {
+        font-family: MuseoModerno;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #0D0D0D;
+    }
+}

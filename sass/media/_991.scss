@@ -1,0 +1,31 @@
+@media (max-width: 991px) {
+    .header {
+        margin: 0 40px;
+    }
+    .promo {
+        &__wrapper {
+            margin-right: 80px;
+        }
+    }
+    .consultation {
+        padding: 100px 20px 92px 20px;
+    }
+    .carousel {
+        &__inner {
+            width: 100%;
+        }
+    }
+    div {
+        img {
+            width: 60%;
+        }
+    }
+    .catalog {
+        &__content {
+            justify-content: center;
+        }
+        &-item {
+            margin: 20px;
+        }
+    }
+}

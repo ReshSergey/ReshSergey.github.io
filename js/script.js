@@ -21,8 +21,8 @@ $(document).ready(function () {
     });
 
     function toggleSlide(item) {
-        $(item).each(function(i) {
-            $(this).on('click', function(e) {
+        $(item).each(function (i) {
+            $(this).on('click', function (e) {
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
                 $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
@@ -34,33 +34,59 @@ $(document).ready(function () {
     toggleSlide('.catalog-item__back');
 
     // MODAL
-    $('[data-modal=consultation]').on('click', function() {
+    $('[data-modal=consultation]').on('click', function () {
         $('.overlay, #consultation').fadeIn('slow');
     });
 
-    $('.modal__close').on('click', function() {
+    $('.modal__close').on('click', function () {
         $('.overlay, .modal').fadeOut('slow');
     });
 
-    $('.button_mini').each(function(i) {
-        $(this).on('click', function(){
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
             $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    //VALIDATE FORMS
+    
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                    }
+                },
+            messages: {
+                name: "Введите ваше имя",
+                phone: "Введите свой телефон",
+                email: {
+                    required: "Введите свою почту",
+                    email: "Непраильный адрес почты"
+                }
+            }
+        });
+    }
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
 });
 
 
 // отключение табов чтоб не ползла верстка в каталоге
 function switchOff() {
-	var alltags = document.getElementsByTagName('*');
-	for (var i=0; i<alltags.length; i++)
-	{
-		if (alltags[i].tabIndex >= 0)
-		{
-			alltags[i].tabIndex = -2;
-		}
-	}
+    var alltags = document.getElementsByTagName('*');
+    for (var i = 0; i < alltags.length; i++) {
+        if (alltags[i].tabIndex >= 0) {
+            alltags[i].tabIndex = -2;
+        }
+    }
 }
 
-switchOff();;
+switchOff();
